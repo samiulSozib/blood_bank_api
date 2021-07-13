@@ -1,0 +1,38 @@
+<%- include('../../partials/header.ejs') %> 
+
+    <div>
+        <div class="container">
+            <div class="card my-2">
+                <div class="card-body">
+                    <h5>Add News</h5>
+                    <form action="/dashboard/addNews" method="POST">
+                        <div class="form-group">
+                            <label for="title">Enter Title</label>
+                            <input type="text" name="title" id="title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="period">Enter Period</label>
+                            <input type="text" name="period" id="period" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="body">Enter Body</label>
+                            <textarea name="body" id="body" class="form-control" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Enter Author</label>
+                            <input type="text" name="author" id="author" class="form-control">
+                        </div>
+
+                        <button class="btn btn-primary">Add News</button>
+                        
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../../partials/footer.ejs') %> 
+
+    </body>
+</html>

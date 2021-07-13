@@ -1,0 +1,38 @@
+<%- include('../../partials/header.ejs') %> 
+
+    <div>
+        <div class="container">
+            <div class="card my-2">
+                <div class="card-body">
+                    <h5>Add Donor</h5>
+                    <form action="/dashboard/addDonor" method="POST">
+                        <div class="form-group">
+                            <label for="name">Enter Name</label>
+                            <input type="text" name="name" id="name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="blood_group">Enter Blood Group</label>
+                            <input type="text" name="blood_group" id="blood_group" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Enter Phone</label>
+                            <input type="text" name="phone" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Enter Location</label>
+                            <input type="text" name="location" id="location" class="form-control">
+                        </div>
+
+                        <button class="btn btn-primary">Add Donor</button>
+                        
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../../partials/footer.ejs') %> 
+
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<%- include('../../partials/header.ejs') %> 
+
+<div class="container my-container">
+    <div class="row">
+        <div class="card card-body">
+            <h5 class="mb-3">News List</h5>
+            <div class="div">
+                <a href="/dashboard/addNews" class="btn btn-primary m-3">Add News</a>
+            </div>
+            <table class="table mt-3">
+                <thead>
+                  <tr>
+                    <th style="width: 5%;" scope="col"></th>
+                    <th style="width: 20%;" scope="col">Title</th>
+                    <th style="width: 5%;" scope="col">Author</th>
+                    <th style="width: 40%;" scope="col">Period</th>
+                    <th style="width: 20%;" scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% if(news.length==0){ %>
+                    <% }else{ %>
+                        <% for(let i=0;i<news.length;i++){ %>
+                            <tr>
+                                <th scope="row"><%= i+1 %> </th>
+                                <td><%= news[i].title %> </td>
+                                <td><%= news[i].author %> </td>
+                                <td><%= news[i].period %> </td>
+                                <td>
+                                    
+                                    <a href="/dashboard/delete-news/<%= news[i].id %>"class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                              </tr>
+                        <% } %>  
+                    <% } %>   
+                </tbody>
+              </table>
+
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/footer.ejs') %> 

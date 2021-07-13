@@ -1,10 +1,20 @@
 
 const apiRoute=require('../api/route/getRoutes')
+const authRoute=require('./authRoute')
+const dashboardRoute=require('./dashboardRoute')
 
 const routes=[
     {
         path:'/api',
         handler:apiRoute
+    },
+    {
+        path:'/admin',
+        handler:authRoute
+    },
+    {
+        path:'/dashboard',
+        handler:dashboardRoute
     },
     {
         path:'/',
